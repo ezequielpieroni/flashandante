@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      <ItemListContainer greetings="Hola, esto es Flash Andante, artesanía en movimiento."/>
+      <ItemListContainer size="md" greetings="Hola, esto es Flash Andante, artesanía en movimiento."/>
     </div>
   )
 }
