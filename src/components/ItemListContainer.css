@@ -1,0 +1,9 @@
+.saludo {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+    margin: 0;
+    color: aliceblue;
+    padding-top: 50px;
+}
