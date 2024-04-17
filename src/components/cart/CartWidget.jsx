@@ -1,5 +1,5 @@
 import CartIcon from "../cart/CartIcon"
-import ProductosCarrito from "./ProductsCart"
+import ProductsCart from "./ProductsCart"
 
 function CartWidget() {
     return (
@@ -10,7 +10,7 @@ function CartWidget() {
                 </a>    
             </div>
             <div className="numero">
-                <ProductosCarrito />
+                <ProductsCart />
             </div>
         </div>
     )

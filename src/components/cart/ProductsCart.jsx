@@ -1,5 +1,5 @@
 
-function ProductosCarrito() {
+function ProductsCart() {
     return (
         <>
             <span>3</span>
@@ -8,4 +8,4 @@ function ProductosCarrito() {
     
 }
 
-export default ProductosCarrito
+export default ProductsCart
