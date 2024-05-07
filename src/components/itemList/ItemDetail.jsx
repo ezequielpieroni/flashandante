@@ -6,6 +6,11 @@ function ItemDetail({item}) {
   
     const {count, incrementar , decrementar} = useCount(0)
 
+    const onAdd = (nombreDeItem, cantidadaLlevar) => {
+        console.log(("Nombre del item: ", nombreDeItem));
+        console.log(("Catidad a llevar: ", cantidadaLlevar));
+    }
+    
     return (
 
         <div className="itemCard">
@@ -24,7 +29,7 @@ function ItemDetail({item}) {
                     decrementar={decrementar} 
                     />
                 </div>
-                <button className="addToCartItem">
+                <button className="addToCartItem"  onClick={() => onAdd(item, count)}>
                     Agregar al carrito
                 </button>
             </div>
