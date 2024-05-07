@@ -2,10 +2,11 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(118, 173, 245);
+    background-color: #99b5d8;
     height: 50px;
     width: 100%;
     position: fixed;
+    z-index: 100;
 }
 
 .brand {

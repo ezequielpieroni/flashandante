@@ -1,10 +1,13 @@
+import { Link } from "react-router-dom"
+
 function CategoryList() {
     return (
         <ul className="categorias">
-            <li><a href="/#">Colgantes</a></li>
-            <li><a href="/#">Pulceras</a></li>
-            <li><a href="/#">Piedras</a></li>
-            <li><a href="/#">Anillos</a></li>
+            <li><Link to={`/`}>Inicio</Link></li>
+            <li><Link to={`/category/colgantes`}>Colgantes</Link></li>
+            <li><Link to={`/category/pulceras`}>Pulceras </Link></li>
+            <li><Link to={`/category/anillos`}>Anillos  </Link></li>
+            <li><Link to={`/nosotros`}>Nosotros  </Link></li>
         </ul>        
     )
 }

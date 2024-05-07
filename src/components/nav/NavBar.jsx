@@ -7,7 +7,7 @@ function NavBar() {
     return (
         <nav className="navbar">
             <div className="brand">
-                <a href="/#"><Brand /></a>
+                <Brand />
             </div>
             <div className="navbar__right">
                 <CategoryList />

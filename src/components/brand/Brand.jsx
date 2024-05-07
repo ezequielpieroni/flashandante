@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 function Brand() {
     return (
         <>
-            <h1>Flash Andante</h1>
+            <h1><Link to={`/`}>Flash Andante</Link></h1>
         </>
     )
 }

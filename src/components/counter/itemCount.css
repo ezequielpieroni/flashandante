@@ -1,0 +1,7 @@
+.contador {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    color: aliceblue;
+    padding: 20px;
+}

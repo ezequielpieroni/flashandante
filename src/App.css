@@ -6,7 +6,9 @@ body, ul {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    font-family: "Roboto", sans-serif;
 }
+
 
 h1 {
     margin: 0;
@@ -24,8 +26,3 @@ ul {
 
 /**----------**/
 
-.saludo {
-    display: flex;
-    justify-content: center;
-    margin: 50px 0;
-}
