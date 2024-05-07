@@ -5,7 +5,7 @@ function CartWidget() {
     return (
         <div className="carrito__numero">
             <div className="carrito">
-                <a href="/#">
+                <a href="#">
                     <CartIcon ancho={20} alto={20}/>
                 </a>    
             </div>
