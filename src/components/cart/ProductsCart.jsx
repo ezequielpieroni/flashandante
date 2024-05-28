@@ -1,9 +1,12 @@
+import { useContext } from "react"
+import { CartContext } from "../../context/CartContext"
 
 function ProductsCart() {
+
+    const {cantidadEnCarrito} = useContext(CartContext)
+
     return (
-        <>
-            <span>3</span>
-        </>
+        cantidadEnCarrito() > 0 &&  (<span className="numero">{cantidadEnCarrito()}</span>)
     )
     
 }

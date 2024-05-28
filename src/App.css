@@ -1,4 +1,6 @@
 /** RESETS **/
+
+
 body, ul {
     margin: 0;
 	padding: 0;
@@ -6,12 +8,14 @@ body, ul {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-    font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
+
 }
 
 
-h1 {
+h1,h2,h3,h4 {
     margin: 0;
+    font-weight: 400;
 }
 
 a {

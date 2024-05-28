@@ -3,7 +3,7 @@ import "./nosotros.css"
 function Nosotros() {
   return (
     <div className="aboutUs">
-      <h2>Nosotros:</h2>
+      <h1>Nosotros:</h1>
       <p>
       ¡Bienvenido a Flash Andante, donde la artesanía está en movimiento!
       </p>

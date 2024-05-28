@@ -1,7 +1,7 @@
 import Brand from "../brand/Brand";
 import CartWidget from "../cart/CartWidget";
 import CategoryList from "../categories/CategoryList";
-import "./Navbar.css"
+import "./navbar.scss"
 
 function NavBar() {
     return (

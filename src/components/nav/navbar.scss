@@ -1,0 +1,71 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000000;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    .brand {
+        padding: 0 10px;
+        background-color: rgb(0, 0, 0);
+        border-radius: 5px;
+        a {
+            color: rgb(231, 226, 220);
+        }
+
+    }
+    .navbar__right {
+        display: flex;
+        align-items: center;
+        margin: 0 20px;
+        .categorias {
+            display: flex;
+            align-items: center;
+            margin: 0 20px;
+            li {
+                margin: 0 10px;
+            }
+            a {
+                color: rgb(231, 226, 220);
+            }
+        }
+        .carrito__numero {
+            display: flex;
+            align-items: center;
+            margin: 0 20px;
+            .carrito {
+                padding: 0 5px;
+                svg {
+                    color: rgb(231, 226, 220);
+                }
+            }
+            .numero {
+                background-color: rgb(212, 132, 132); /* Color de fondo del círculo */
+                color: white;
+                border-radius: 50%; 
+                width: 20px; 
+                height: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 14px; 
+                
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

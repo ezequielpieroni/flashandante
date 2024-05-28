@@ -1,16 +1,14 @@
+import { useContext } from "react"
 import useCount from "../../hooks/useCount"
 import ItemCount from "../counter/ItemCount"
+import { CartContext } from "../../context/CartContext"
 
 
 function ItemDetail({item}) {
   
-    const {count, incrementar , decrementar} = useCount(0)
+    const {count, incrementar , decrementar} = useCount(1)
+    const {carrito, addItem} =  useContext(CartContext)   
 
-    const onAdd = (nombreDeItem, cantidadaLlevar) => {
-        console.log(("Nombre del item: ", nombreDeItem));
-        console.log(("Catidad a llevar: ", cantidadaLlevar));
-    }
-    
     return (
 
         <div className="itemCard">
@@ -20,6 +18,7 @@ function ItemDetail({item}) {
                     <h2>{item.product}</h2>
                     <p>{item.description}</p>
                     <p>${item.price}</p>
+                    <p>Stock: {item.stock}</p>
                 </div>
                 <div className="counterItemDetail"> 
                     <ItemCount 
@@ -29,7 +28,7 @@ function ItemDetail({item}) {
                     decrementar={decrementar} 
                     />
                 </div>
-                <button className="addToCartItem"  onClick={() => onAdd(item, count)}>
+                <button className="addToCartItem"  onClick={() => count && addItem(item, count)}>
                     Agregar al carrito
                 </button>
             </div>

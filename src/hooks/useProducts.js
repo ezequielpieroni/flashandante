@@ -1,32 +1,46 @@
 import { useState } from "react"
 import { useEffect } from "react"
-import { getProducts } from "../Mock/asyncMock"
+import { collection, getDocs, query, where } from "firebase/firestore"
+import { db } from "../firebase/config"
+import { useParams } from "react-router-dom"
 
 
-export default function useProducts(category) {
+
+export default function useProducts() {
 
     const [products, setProducts] = useState ([])
     const [cargando, setCargando] = useState (true)
     const [titulo, setTitulo] = useState("")
-    console.log(cargando);
+    const category = useParams().category
+
     useEffect (() => {
         
-        if (!cargando) {
-            setCargando(true);
-        }
-        getProducts()
-            .then((data) => {
-                if (category) {
-                    setProducts(data.filter((prod) => prod.category === category))
-                    setTitulo(category)
-                    setCargando(true)
-                } else {
-                    setProducts(data)
-                    setTitulo("Todos los productos")
-                    setCargando(true)
-                }})
-            .finally(() => setCargando(false))
-    }, [category])
+        setCargando(true)
+        const productosCollection = collection(db, "item")
+        const q = category ? query(productosCollection, where("category", "==", category)) : productosCollection
+ 
+        getDocs(q)
+        .then((snapshot) => {
 
+            setProducts(
+                snapshot.docs.map((doc) => {
+                    return {...doc.data(), id: doc.id }
+                })
+            )
+        })
+
+        .finally(() => 
+            setCargando(false)
+        )
+
+        if (category) {
+            setTitulo(category)
+        } else {         
+            setTitulo("")
+        }
+        
+    }, [category])
+    
     return {products, cargando, titulo}    
 }
+

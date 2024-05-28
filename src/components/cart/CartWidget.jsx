@@ -1,15 +1,15 @@
+import { Link } from "react-router-dom"
 import CartIcon from "../cart/CartIcon"
 import ProductsCart from "./ProductsCart"
 
 function CartWidget() {
+
     return (
         <div className="carrito__numero">
             <div className="carrito">
-                <a href="#">
-                    <CartIcon ancho={20} alto={20}/>
-                </a>    
+                <Link to={`/cart`}><CartIcon ancho={20} alto={20}/></Link>  
             </div>
-            <div className="numero">
+            <div>
                 <ProductsCart />
             </div>
         </div>

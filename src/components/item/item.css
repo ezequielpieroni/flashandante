@@ -1,0 +1,130 @@
+/* Estilo para la lista de ítems */
+.item--list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 100px;
+}
+
+/* Estilo para el contenedor de cada ítem */
+.item--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    width: 20%;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.item--container:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para la imagen del ítem */
+.image img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Estilo para el pie de la tarjeta */
+.footCard {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.footCard h4 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footCard h5 {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #777;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footCard p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.footCard button {
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.footCard button:hover {
+    background: #444;
+}
+
+.footCard button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* Estilo para el detalle del ítem */
+.itemCard {
+    display: flex;
+}
+
+.itemCard img {
+    width: 50%;
+    padding: 50px;
+}
+
+.rightColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.itemDetailDescription {
+    padding-right: 50px;
+}
+
+.counterItemDetail {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.addToCartItem {
+    border: none;
+    background: rgb(38, 37, 37);
+    color: aliceblue;
+    padding: 10px;
+    margin: 0;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    transition: background 0.3s;
+}
+
+.addToCartItem:hover {
+    background: #444;
+}
+
+button:focus {
+    outline: none;
+}

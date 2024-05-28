@@ -2,11 +2,11 @@ import "./itemCount.css"
 
 
 function ItemCount({stock, count, incrementar, decrementar}) { 
-
+    
     return (
         <div className="contador">
             <button 
-                className="minusBotton"
+                className="minusButton"
                 onClick={decrementar}
                 disabled= {count <= 0}
             >
@@ -14,7 +14,7 @@ function ItemCount({stock, count, incrementar, decrementar}) {
             </button>
             <span className="counter">{count}</span>
             <button 
-                className="plusBotton"
+                className="plusButton"
                 onClick={incrementar} 
                 disabled= {count >= stock}
             >
