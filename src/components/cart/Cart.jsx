@@ -70,7 +70,10 @@ const Cart = () => {
               <Link to="/checkout"><button>Finalizar compra</button></Link>
             </div>
           </div> :
-          <h2>El carrito esta vacío</h2>
+          <div className='emptyCart'>
+            <hr />
+            <h2>El carrito esta vacío</h2>
+          </div>
       }
 
 

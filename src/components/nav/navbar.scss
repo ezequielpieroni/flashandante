@@ -1,71 +1,172 @@
 .navbar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #000000;
-    height: 50px;
-    width: 100%;
-    position: fixed;
-    z-index: 100;
-    .brand {
-        padding: 0 10px;
-        background-color: rgb(0, 0, 0);
-        border-radius: 5px;
-        a {
-            color: rgb(231, 226, 220);
-        }
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
 
+  .brand {
+    padding: 0 10px;
+    border-radius: 5px;
+
+    a {
+      color: rgb(231, 226, 220);
+      text-decoration: none;
+      font-size: 1.2em;
+      font-weight: bold;
     }
-    .navbar__right {
+  }
+
+  .navbar__right {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+
+    .menu-items {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .categorias {
         display: flex;
         align-items: center;
-        margin: 0 20px;
-        .categorias {
-            display: flex;
-            align-items: center;
-            margin: 0 20px;
-            li {
-                margin: 0 10px;
+        margin-left: 20px;
+
+        li {
+          margin: 0 10px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          a {
+            color: rgb(231, 226, 220);
+            text-decoration: none;
+            font-size: 1em;
+
+            &:hover {
+              text-decoration: underline;
             }
-            a {
-                color: rgb(231, 226, 220);
-            }
+          }
         }
-        .carrito__numero {
-            display: flex;
-            align-items: center;
-            margin: 0 20px;
-            .carrito {
-                padding: 0 5px;
-                svg {
-                    color: rgb(231, 226, 220);
-                }
-            }
-            .numero {
-                background-color: rgb(212, 132, 132); /* Color de fondo del círculo */
-                color: white;
-                border-radius: 50%; 
-                width: 20px; 
-                height: 20px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 14px; 
-                
-            }
+      }
+
+      .carrito__numero {
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+
+        .carrito {
+          padding: 0 5px;
+
+          svg {
+            color: rgb(231, 226, 220);
+            width: 20px;
+            height: 20px;
+          }
         }
+
+        .numero {
+          background-color: rgb(212, 132, 132);
+          color: white;
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 14px;
+        }
+      }
     }
+  }
+
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 101;
+
+    span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: #fff;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    &.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    &.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .hamburger-menu {
+      display: flex;
+
+    }
+
+    .navbar__right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: auto;
+
+      &.open {
+        .menu-items {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          background-color: #000;
+          position: absolute;
+          top: 50px;
+          left: 0;
+          padding: 10px;
+
+          .categorias {
+            flex-direction: column;
+            width: 100%;
+
+            li {
+              width: 100%;
+
+              a {
+                display: block;
+                padding: 10px 0;
+                text-align: center;
+              }
+            }
+          }
+
+          .carrito__numero {
+            width: 100%;
+            justify-content: center;
+            margin: 10px 0;
+          }
+        }
+      }
+
+      .menu-items {
+        display: none;
+      }
+    }
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

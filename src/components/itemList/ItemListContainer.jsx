@@ -1,6 +1,6 @@
 import useProducts from "../../hooks/useProducts"
 import ItemList from "../itemList/ItemList"
-import "./itemListContainer.css"
+import "./itemList.scss"
 
 
 function ItemListContainer({greetings}) {

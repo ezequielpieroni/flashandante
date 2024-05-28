@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./item.css"
+import "./item.scss"
 import toCapital from "../../hooks/useCapital";
 import useLastLetter from "../../hooks/useLastLetter";
 import { useContext } from "react";

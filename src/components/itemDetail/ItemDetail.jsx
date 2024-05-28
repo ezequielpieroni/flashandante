@@ -2,6 +2,7 @@ import { useContext } from "react"
 import useCount from "../../hooks/useCount"
 import ItemCount from "../counter/ItemCount"
 import { CartContext } from "../../context/CartContext"
+import "./itemDetail.scss"
 
 
 function ItemDetail({item}) {

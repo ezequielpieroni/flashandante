@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom"
 
-function CategoryList() {
+function CategoryList(handleMenuToggle) {
+    
     return (
         <ul className="categorias">
-            <li><Link to={`/category/colgantes`}>Colgantes</Link></li>
-            <li><Link to={`/category/pulceras`}>Pulceras </Link></li>
-            <li><Link to={`/category/anillos`}>Anillos  </Link></li>
-            <li><Link to={`/nosotros`}>Nosotros  </Link></li>
+            <li><Link to={`/category/colgantes`}  onClick={handleMenuToggle}>Colgantes</Link></li>
+            <li><Link to={`/category/pulceras`}  onClick={handleMenuToggle}>Pulceras </Link></li>
+            <li><Link to={`/category/anillos`}  onClick={handleMenuToggle}>Anillos  </Link></li>
+            <li><Link to={`/nosotros`}  onClick={handleMenuToggle}>Nosotros  </Link></li>
         </ul>        
     )
 }

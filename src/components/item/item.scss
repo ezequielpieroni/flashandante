@@ -1,0 +1,82 @@
+.item--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    width: 50%;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .image img {
+        width: 100%;
+        height: auto;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .footCard {
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+
+        h4 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h5 {
+            font-size: 1rem;
+            margin: 5px 0;
+            color: #777;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        p {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+
+        button {
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: inline-block;
+
+            &:hover {
+                background: #444;
+            }
+        }
+    }
+
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+    .item--container {
+        width: 50%;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .item--container {
+        width: 33.33%;
+    }
+}

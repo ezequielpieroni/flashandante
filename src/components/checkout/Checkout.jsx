@@ -3,6 +3,7 @@ import { CartContext } from '../../context/CartContext'
 import { useForm } from 'react-hook-form'
 import { addDoc, collection } from 'firebase/firestore'
 import { db } from '../../firebase/config'
+import "./checkout.scss"
 
 const Checkout = () => {
 
@@ -32,7 +33,7 @@ const Checkout = () => {
 
   if (pedidoId) {
     return (
-      <div>
+      <div className="orderConfirmation">
         <h1>Gracias por tu compra!</h1>
         <h4>Número de pedido: {pedidoId}</h4>
       </div>

@@ -1,8 +1,6 @@
-import { useEffect, useState } from "react"
 import ItemDetail from "./ItemDetail";
-import { useParams } from "react-router-dom";
 import useProductById from "../../hooks/useProductById";
-import {doc, getDoc} from "firebase/firestore";
+
 
 export default function ItemDetailContainer () {
 

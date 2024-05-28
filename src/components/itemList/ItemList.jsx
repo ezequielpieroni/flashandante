@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import toCapital from "../../hooks/useCapital";
 import Item from "../item/Item";
-import "../item/item.css"
+import "./itemList.scss"
 
 export default function ItemList ({ products, titulo }) {
     
