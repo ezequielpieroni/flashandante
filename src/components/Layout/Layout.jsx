@@ -1,6 +1,6 @@
 import Footer from "../footer/Footer";
 import NavBar from "../nav/NavBar";
-import "./layout.css" 
+import "./layout.scss" 
 
 export default function Layout ({children}){
 
