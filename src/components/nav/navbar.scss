@@ -117,6 +117,18 @@
     }
   }
 
+  @media screen and (max-width: 300px) {
+    .brand a {
+      font-size: large;
+    }
+  }
+
+  @media screen and (max-width: 300px) {
+    .navbar__right  {
+      width: 20px!important;
+    }
+  }
+
   @media screen and (max-width: 768px) {
 
     .hamburger-menu {

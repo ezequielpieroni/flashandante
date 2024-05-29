@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
+    margin: 20px 20px 0 20px;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
@@ -21,6 +21,7 @@
         font-size: 1.1em;
         line-height: 1.6;
         margin-bottom: 15px;
+        text-align: justify;
 
         &:last-of-type {
             margin-bottom: 0;

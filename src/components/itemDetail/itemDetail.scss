@@ -35,12 +35,42 @@
             &:focus {
                 outline: none;
             }
-        }   
+        } 
+         
     }
 }
 
+@media screen and (max-width: 600px) {
+    .itemCard {
+        img{
+            width: 80%;
+        }
+    }
+} 
 
-
+@media screen and (max-width: 1024px) {
+    .itemCard {
+        flex-direction: column;
+        align-items: center;
+        img{
+            margin-top: 30px;
+            padding: 0;
+        }
+        .rightColumn{
+            margin: 0 50px;
+            .itemDetailDescription{
+                padding: 0;
+                
+            }
+            p {
+                text-align: justify;
+            }
+            h2 {
+                text-align: center;
+            }
+        }
+    }
+} 
 
 
 

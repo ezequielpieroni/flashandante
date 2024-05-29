@@ -21,7 +21,7 @@ const Cart = () => {
       <div>
         <div className="cartHeaderContainer">
           <h1>Mi carrito </h1>
-          <h4>{cantidadEnCarrito()} productos</h4>
+          <h4>{cantidadEnCarrito()} {cantidadEnCarrito() === 1 ? 'producto' : 'productos'}</h4>
         </div>
         <div className='seguirComprando'>
           <h4><Link to={`/`}>Seguir comprando <Arrow ancho="15px" alto="15px"/></Link></h4>
@@ -30,10 +30,10 @@ const Cart = () => {
       {carrito.map((product) => {
           return (
             <div className="cartProductContainer" key={product.id}>
-              <div>
+              <div className='imageContainer'>
                 <img className="cartProductImage" src={product.image} alt="" />
               </div>
-              <div>
+              <div className='titleContainer'>
                 <div className="cartProductTitle">
                   <h3>{product.product}</h3>
                   <button onClick={() => removeItem(product.id)}>
@@ -53,7 +53,7 @@ const Cart = () => {
                       }
                     }}
                   />
-                  <p>Total: ${product.price * product.cantidad}</p>
+                  <p className='priceProduct'>Total: ${product.price * product.cantidad}</p>
                 </div>
               </div>
             </div>
